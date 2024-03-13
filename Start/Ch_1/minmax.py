@@ -11,6 +11,7 @@ strings = ["one", "three", "five", "seven", "eleven", "eighteen"]
 # TODO: The min() function finds the minimum value
 # TODO: The min() function finds the minimum value
 print("# TODO: The min() function finds the minimum value")
+print('NOTE: using f-strings: format print(f"min value is {min(values)}")') 
 print(f"minimum value of values is {min(values)}")
 print(f"minimum value of strings is {min(strings)}")
 
@@ -22,8 +23,13 @@ print(f"maximum value of strings is {max(strings)}")
 
 
 # TODO: define a custom "key" function to extract a data field
-
+print("default key for max and min for str is alphabetic order")
+print("to key on length of strings for max and min, call the function with a key")
+print('print(f"maximum value of values is {max(strings,key=len))}")')
+print('print(f"minimum value of values is {min(strings,key=len))}")')
+print(f"maximum value of values is {max(strings,key=len)}")
+print(f"minimum value of strings is {min(strings,key=len)}")
 
 # TODO: open the data file and load the JSON
-# with open("../../30DayQuakes.json", "r") as datafile:
-#     data = json.load(datafile)
+with open("../../30DayQuakes.json", "r") as datafile:
+    data = json.load(datafile)
