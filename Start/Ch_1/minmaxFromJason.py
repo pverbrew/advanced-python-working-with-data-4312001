@@ -21,3 +21,11 @@ print("Print features with the min and max magnitudes")
 print(min(data["features"], key=getmag))
 print(max(data["features"], key=getmag))
 
+datamin = min(data["features"], key=getmag)
+
+datamax = max(data["features"], key=getmag)
+
+print("min mag was", datamin["properties"]["mag"],"located", datamin["properties"]["place"])
+print("max mag was", datamax["properties"]["mag"],"located", datamax["properties"]["place"])
+
+
