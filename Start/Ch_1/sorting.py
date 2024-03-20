@@ -33,7 +33,14 @@ def getmag(dataitem):
         magnitude = 0
     return float(magnitude)
 
+
+print ("\n\n\n====================================================================")
+print("generate a list of the earthquakes from largest to smallest magnitude")
+print("recall that sort goes from smallest to largest")
+print('data["features"].sort(key=getmag, reverse=True)')
+print ("====================================================================")
 data["features"].sort(key=getmag, reverse=True)
 for i in range(0,10):
     print(data["features"][i]["properties"]["place"],
           data["features"][i]["properties"]["mag"])
+    

@@ -27,5 +27,20 @@ datamax = max(data["features"], key=getmag)
 
 print("min mag was", datamin["properties"]["mag"],"located", datamin["properties"]["place"])
 print("max mag was", datamax["properties"]["mag"],"located", datamax["properties"]["place"])
+print("\n\n\n")
+def getsig(dataitem):
+  significance = dataitem["properties"]["sig"]
+  if significance is None:
+      significance = 0
+  return significance
 
 
+
+data["features"].sort(key=getsig, reverse=True)
+sigmin = min(data["features"],key=getsig)
+sigmax = max(data["features"],key=getsig)
+print(sigmin["properties"]["sig"], "was the minimum significance")
+print(sigmax["properties"]["sig"], "was the maximum significance")
+for i in range(0,9):
+    print(data["features"][i]["properties"]["sig"], 
+          data["features"][i]["properties"]["place"])
