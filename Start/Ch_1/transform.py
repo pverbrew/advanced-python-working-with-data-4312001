@@ -3,6 +3,7 @@
 
 import json
 import pprint
+import datetime
 
 
 def squareFunc(x):
@@ -33,15 +34,33 @@ letterGrades = sorted(list(map(toGrade, grades)))
 print(letterGrades)
 # Use the filter on our data - let's filter out all seismic events that were *not* quakes
 # open the data file and load the JSON
-# with open("../../30DayQuakes.json", "r") as datafile:
-#     data = json.load(datafile)
+with open("../../30DayQuakes.json", "r") as datafile:
+     data = json.load(datafile)
 
 
 # filter the data down to the largest events
-# def bigmag(q):
-#     return q['properties']['mag'] is not None and q['properties']['mag'] >= 6
+def bigmag(q):
+     return q['properties']['mag'] is not None and q['properties']['mag'] >= 6
 
 
-# results = list(filter(bigmag, data['features']))
+results = list(filter(bigmag, data['features']))
+print(results[0], "\n\n", results[1], "\n\n", results[2], "\n\n")
 
 # TODO: transform the largest events into a simpler structure
+def simplify(q):
+    return{
+        "place" : q['properties']['place'],
+        "magnitude" : q['properties']['mag'],
+        "date" : str(datetime.date.fromtimestamp(q['properties']["time"]/1000))
+    }
+
+results = list(map(simplify, results))
+print("type of transformed simplification:", type(results))  # results is type list
+print("type of transformed items:", type(results[0]))        # results[0] is type dict
+print("So, the simplified structure is a LIST of DICT items\n\n")
+
+
+print(results[0], "\n\n", results[1], "\n\n", results[2], "\n\n")
+pprint.pp(results, indent=2)
+
+

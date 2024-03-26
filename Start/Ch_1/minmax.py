@@ -1,4 +1,4 @@
-# Example file for Advanced Python: Working With Data by Joe Marini
+#  Example file for Advanced Python: Working With Data by Joe Marini
 # Demonstrates the usage of the min and max functions
 import json
 
@@ -9,7 +9,7 @@ strings = ["one", "three", "five", "seven", "eleven", "eighteen"]
 
 
 # TODO: The min() function finds the minimum value
-# TODO: The min() function finds the minimum value
+# TODO: The min() function finds the minimum vale
 print("# TODO: The min() function finds the minimum value")
 print('NOTE: using f-strings: format print(f"min value is {min(values)}")') 
 print(f"minimum value of values is {min(values)}")
