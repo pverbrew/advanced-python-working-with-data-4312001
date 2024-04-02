@@ -1,0 +1,18 @@
+    #googlemaplink = "https://www.google.com/maps/search/?ap[i=1&query=" + latitude + "," + longitude
+        "coordinates": [-116.0666656, 33.1399994, 9.45]
+    https://www.google.com/maps/search/?ap[i=1&query=-116.0666656, 33.1399994, 9.45
+        "coordinates": [-116.0666656, 33.1399994, 9.45]
+    https://www.google.com/maps@-116.0666656, 33.1399994, 9.45
+
+
+
+Why not https://www.google.com/maps/place/lat,lng I think this is the simplest way
+
+https://www.google.com/maps/place/49.46800006494457,17.11514008755796
+
+
+
+
+
+
+

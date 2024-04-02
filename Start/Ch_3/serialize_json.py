@@ -36,3 +36,5 @@ str = json.dumps(largequakes, sort_keys=True, indent=4)
 print(str)
 
 # TODO: use the dump() function to write json to a file
+with open("largequakes.json", "w") as outfile:
+  json.dump(largequakes, outfile, sort_keys=True, indent=4)
