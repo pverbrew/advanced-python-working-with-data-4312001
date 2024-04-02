@@ -1,0 +1,29 @@
+1) coordinates from USGS in json file need to be revered to work with google maps
+2) format below with "z=12": z rumored to be zoom factor from 1 to 20 - changing value has no effect
+3) both the "working" formats below work
+
+
+
+work:
+
+https://www.google.com/maps/place/49.46800006494457,17.11514008755796
+http://maps.google.com/maps?z=12&t=m&q=loc:49.46800006494457,17.11514008755796
+http://maps.google.com/maps?z=12&t=m&q=loc:40.751,-112.0783333
+http://maps.google.com/maps?z=12&t=m&q=loc:44.4465,38.5429 
+https://www.google.com/maps/place/Vetlanda,+Sweden/@57.4217311,15.0849255,13z/data=!3m1!4b1!4m2!3m1!1s0x465758d912d321b5:0x55675191e550be84?hl=en
+dont work:
+https://www.google.com/maps/search/?ap[i=1&query=40.751,-112.0783333
+https://www.google.com/maps/place/-112.0783333,40.751  #reversing coordinates works
+http://maps.google.com/maps?z=12&t=m&q=loc:-112.078+40.751  #reversing coordinates works
+http://maps.google.com/maps?z=12&t=m&q=loc:-112.075,40.7651667  #reversing coordinates works
+http://maps.google.com/maps?z=12&t=m&q=loc:-125.0936667,40.3916667  #reversing coordinates works
+https://www.google.com/maps@33.1399994, -116.0666656, 9.45
+https://www.google.com/maps@33.1399994, -116.0666656
+
+http://maps.google.com/maps?z=12&t=m&q=loc:
+http://maps.google.com/maps?z=12&t=m&q=loc:
+http://maps.google.com/maps?z=12&t=m&q=loc:
+http://maps.google.com/maps?z=12&t=m&q=loc:
+http://maps.google.com/maps?z=12&t=m&q=loc:
+
+ http://maps.google.com/maps?z=12&t=m&q=loc:
