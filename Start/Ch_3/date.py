@@ -1,6 +1,6 @@
 import datetime
 
-
+#play with datetime to see how to get now() and from that generate a date
 print("\nget current date and time")
 t = datetime.datetime.now()
 print("datetime.datetime.now() =", t, "\n")
